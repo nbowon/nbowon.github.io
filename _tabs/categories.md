@@ -51,7 +51,6 @@ order: 1
           class="ml-1 mr-2">
           {{ category_name }}
         </a>
-
         <!-- content count -->
         {% assign top_posts_size = site.categories[category_name] | size %}
         <span class="text-muted small font-weight-light">
@@ -63,7 +62,6 @@ order: 1
             post{% if top_posts_size > 1 %}s{% endif %}
         </span>
       </span>
-
       <!-- arrow -->
       {% if sub_categories_size > 0%}
       <a href="#{{ LIST_PREFIX }}{{ group_index }}" data-toggle="collapse" 
@@ -76,9 +74,7 @@ order: 1
         <i class="fas fa-fw fa-angle-right"></i>
       </span>
       {% endif %}
-
     </div> <!-- .card-header -->
-
     <!-- Sub-categories -->
     {% if sub_categories_size > 0 %}
     <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse show" aria-expanded="true">
@@ -97,10 +93,7 @@ order: 1
       </ul>
     </div>
     {% endif %}
-
   </div> <!-- .card -->
-
     {% assign group_index = group_index | plus: 1 %}
-
   {% endif %}
 {% endfor %}
